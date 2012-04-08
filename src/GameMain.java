@@ -58,6 +58,11 @@ public class GameMain {
 	 */
 	public void pollKeyboardInput()
 	{
+		if (Keyboard.isKeyDown(Keyboard.KEY_UP))
+		{
+			hero.jump();
+		}
+		
 		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT))
 		{
 			hero.runLeft();

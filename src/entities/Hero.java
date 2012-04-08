@@ -114,6 +114,19 @@ public class Hero {
 	}
 	
 	/**
+	 * Adjust animation frames and speeds for the character jumping
+	 */
+	public void jump()
+	{
+		if (onGround == true)
+		{
+			onGround = false;
+			heroy += 1; // if the hero doesn't lift up a unit, he will collide with the ground immediately and stay there
+			heroySpeed += 6f;
+		}
+	}
+	
+	/**
 	 * Adjust idle animation frames and speeds, as well as handle any transitions into the idle state
 	 */
 	public void idle()
